@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Camisas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sankofa+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Arena Camisas</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="payment">
+            <h2>Resumo da Compra</h2>
+            <p id="total-amount"></p>
+
+            <!-- Formulário de Dados Pessoais -->
+            <form id="personal-info-form">
+                <div id="personal-info">
+                    <h3>Informações Pessoais</h3>
+                    <p>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>O cadastro será finalizado por e-mail, por lá você poderá informar endereço de entrega</p>
+                    <p>Lembrando que nosso frete é grátis!</p>
+                </div>
+
+                <!-- Método de Pagamento -->
+                <div id="payment-method-section">
+                    <p>
+                        <label for="payment-method">Método de Pagamento:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="pix">Pix</option>
+                            <option value="credit-card">Cartão de Crédito</option>
+                        </select>
+                    </p>
+
+                    <div id="pix-info" class="payment-info" style="display:none;">
+                        <p>Escaneie o QR Code abaixo com seu aplicativo de banco:</p>
+                        <img src="qrcode-pix.png" alt="QR Code Pix">
+                        <p><button id="pix-button" type="button">Já realizei o pagamento</button></p>
+                    </div>
+
+                    <div id="credit-card-info" class="payment-info" style="display:none;">
+                        <p>
+                            <label for="card-number">Número do Cartão:</label>
+                            <input type="text" id="card-number" name="card-number" required>
+                        </p>
+                        <p>
+                            <label for="expiry-date">Data de Validade:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" maxlength="5" required>
+                        </p>
+                        <p>
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" maxlength="4" required>
+                        </p>
+                        <button type="submit">Finalizar Pagamento</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const totalAmount = urlParams.get('total') || '0.00';
+            document.getElementById('total-amount').innerText = `Total a pagar: R$ ${totalAmount}`;
+
+            const paymentMethodSelect = document.getElementById('payment-method');
+            const pixInfo = document.getElementById('pix-info');
+            const creditCardInfo = document.getElementById('credit-card-info');
+            const personalInfoForm = document.getElementById('personal-info-form');
+            const pixButton = document.getElementById('pix-button');
+
+            paymentMethodSelect.addEventListener('change', function() {
+                pixInfo.style.display = 'none';
+                creditCardInfo.style.display = 'none';
+
+                if (this.value === 'pix') {
+                    pixInfo.style.display = 'block';
+                } else if (this.value === 'credit-card') {
+                    creditCardInfo.style.display = 'block';
+                }
+            });
+
+            document.getElementById('card-number').addEventListener('input', function(event) {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length > 16) value = value.slice(0, 16);
+                this.value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+            });
+
+            document.getElementById('expiry-date').addEventListener('input', function(event) {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length > 4) value = value.slice(0, 4);
+                if (value.length >= 3) {
+                    value = value.slice(0, 2) + '/' + value.slice(2);
+                }
+                this.value = value;
+            });
+
+            document.getElementById('cvv').addEventListener('input', function(event) {
+                this.value = this.value.replace(/\D/g, '').slice(0, 4);
+            });
+
+            personalInfoForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const selectedPaymentMethod = paymentMethodSelect.value;
+
+                if (selectedPaymentMethod === 'credit-card') {
+                    // Processa pagamento com cartão de crédito
+                    localStorage.removeItem('cart');
+                    window.location.href = 'thank-you.html';
+                }
+            });
+
+            pixButton.addEventListener('click', function() {
+                // Simula a finalização do pagamento via Pix
+                localStorage.removeItem('cart');
+                window.location.href = 'thank-you.html';
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>Projeto desenvolvido por Fabrício.</p>
+            <p>&copy; 2024 Arena Camisas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

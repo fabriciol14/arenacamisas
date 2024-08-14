@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Camisas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Arena Camisas</h1>
+            <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sankofa+Display&display=swap" rel="stylesheet">
+            <div id="cart">
+                <span id="cart-icon">🛒</span>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="product-details">
+            <img id="product-image" alt="">
+            <div class="details">
+                <h2 id="product-name"></h2>
+                <p id="product-price"></p>
+                <p id="product-description"></p>
+                <button id="add-to-cart-button">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('name');
+            const productPrice = urlParams.get('price');
+            const productImage = urlParams.get('image');
+            const productDescription = urlParams.get('description') || 'Descrição não disponível.';
+
+            document.getElementById('product-name').innerText = productName;
+            document.getElementById('product-price').innerText = `R$ ${parseFloat(productPrice).toFixed(2)}`;
+            document.getElementById('product-image').src = productImage;
+            document.getElementById('product-description').innerText = productDescription;
+
+            document.getElementById('add-to-cart-button').addEventListener('click', function() {
+                addToCart(productName, parseFloat(productPrice));
+            });
+        });
+
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const productIndex = cart.findIndex(item => item.name === name);
+            if (productIndex > -1) {
+                cart[productIndex].quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+</body>
+<body>
+    <main class="container">
+        <section id="products">
+            <h2>Produtos</h2>
+            <div id="product-list" class="product-grid"></div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeCart()">×</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <button onclick="finalizePurchase()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Projeto desenvolvido por Fabrício.</p>
+            <p>&copy; 2024 Arena Camisas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

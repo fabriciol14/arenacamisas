@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Camisa I Corinthians 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_a.png",
+        "description": "Faça parte da batalha contra o racismo com a Camisa Corinthians I 24/25. Pioneiro contra o preconceito racial, o Corinthians e o Observatório da Discriminação Racial no Futebol entram em campo na luta antirracista, promovendo o novo manto para a temporada, que é mais do que uma peça, e sim, um símbolo da busca pela igualdade e combate a segregação. Com emblema do lado esquerdo do peito, essa camisa do Corinthians é totalmente preta e possui selo no interior da gola com o escrito antirracista “Tamo Junto e Misturado.” Faça parte da história! Compre já a sua!"
+    },
+    {
+        "name": "Camiseta I São Paulo 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_b.png",
+        "description": "Tão pesada quanto sua própria história. O Tricolor celebra os anos de lutas, suor e conquistas com a Camisa São Paulo I 24/25. O novo manto é mais do que uma peça, e sim um tributo à toda glória do clube. Camisa pesada que representa o único tricampeão mundial brasileiro, essa Camisa São Paulo New Balance Masculina é predominantemente branca com listras verticais na parte frontal. Além disso, possui gola polo, mangas com as cores do clube e tecido tecnológico que amplia a sensação de leveza e conforto. O escrito “Clube da Fé” aparece na parte de trás e simboliza a torcida que conduz e apoia até o apito final. Faça parte da história, homenageie os momentos gloriosos e o futuro promissor com essa Camisa do São Paulo. Peça já!"
+    },
+    {
+        "name": "Camisa I Palmeiras 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_c.png",
+        "description": "A camisa I do Palmeiras 2024, é ideal para levar o legado vitorioso do Verdão desde 1914. O manto traz grafismos com os escudos utilizados desde sua fundação e abaixo do atual a frase S.E.P 110 anos bordada."
+    },
+    {
+        "name": "Camisa I Santos 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_d.png",
+        "description": "Vista-se com orgulho e demonstre sua paixão pelo Santos F.C. com a Camisa Umbro Santos Oficial 1 2024 Masculina - Estádio. Feita com materiais de qualidade, oferecendo conforto, leveza e durabilidade."
+    },
+    {
+        "name": "Camisa I Bragantino 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_e.png",
+        "description": "A Camisa Home Jersey Off White 24/25 do Red Bull Bragantino é uma celebração da força e da modernidade, inspirada pelo lema 'Forjados Em Bragança'. Esta camisa, projetada para a temporada 2024/2025, representa a identidade e a força do clube, combinando estilo, tecnologia e a essência de Bragança Paulista."
+    },
+    {
+        "name": "Camisa I Vasco 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_f.png",
+        "description": "A Kappa apresentou oficialmente a nova camisa titular preta do Vasco da Gama para 2024, celebrando os 70 anos de Roberto Dinamite, maior ídolo do clube e também os 50 anos do título brasileiro de 1974."
+    },
+    {
+        "name": "Camisa II Corinthians 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_a2.png",
+        "description": "Faça parte da batalha contra o racismo com a Camisa Corinthians II 24/25. Pioneiro contra o preconceito racial, o Corinthians e o Observatório da Discriminação Racial no Futebol entram em campo na luta antirracista, promovendo o novo manto para a temporada, que é mais do que uma peça, e sim, um símbolo da busca pela igualdade e combate a segregação. Com emblema do lado esquerdo do peito, essa camisa do Corinthians é totalmente preta e possui selo no interior da gola com o escrito antirracista “Tamo Junto e Misturado.” Faça parte da história! Compre já a sua!"
+    },
+    {
+        "name": "Camiseta II São Paulo 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_b2.png",
+        "description": "Tão pesada quanto sua própria história. O Tricolor celebra os anos de lutas, suor e conquistas com a Camisa São Paulo I 24/25. O novo manto é mais do que uma peça, e sim um tributo à toda glória do clube. Camisa pesada que representa o único tricampeão mundial brasileiro, essa Camisa São Paulo New Balance Masculina é predominantemente branca com listras verticais na parte frontal. Além disso, possui gola polo, mangas com as cores do clube e tecido tecnológico que amplia a sensação de leveza e conforto. O escrito “Clube da Fé” aparece na parte de trás e simboliza a torcida que conduz e apoia até o apito final. Faça parte da história, homenageie os momentos gloriosos e o futuro promissor com essa Camisa do São Paulo. Peça já!"
+    },
+    {
+        "name": "Camisa II Palmeiras 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_c2.png",
+        "description": "A camisa I do Palmeiras 2024, é ideal para levar o legado vitorioso do Verdão desde 1914. O manto traz grafismos com os escudos utilizados desde sua fundação e abaixo do atual a frase S.E.P 110 anos bordada."
+    },
+    {
+        "name": "Camisa II Santos 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_d2.png",
+        "description": "Vista-se com orgulho e demonstre sua paixão pelo Santos F.C. com a Camisa Umbro Santos Oficial 1 2024 Masculina - Estádio. Feita com materiais de qualidade, oferecendo conforto, leveza e durabilidade."
+    },
+    {
+        "name": "Camisa II Bragantino 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_e2.png",
+        "description": "A Camisa Home Jersey Off White 24/25 do Red Bull Bragantino é uma celebração da força e da modernidade, inspirada pelo lema 'Forjados Em Bragança'. Esta camisa, projetada para a temporada 2024/2025, representa a identidade e a força do clube, combinando estilo, tecnologia e a essência de Bragança Paulista."
+    },
+    {
+        "name": "Camisa II Vasco 2024/25",
+        "price": 199.90,
+        "image": "assets/images/time_f2.png",
+        "description": "A Kappa apresentou oficialmente a nova camisa titular preta do Vasco da Gama para 2024, celebrando os 70 anos de Roberto Dinamite, maior ídolo do clube e também os 50 anos do título brasileiro de 1974."
+    }
+]
